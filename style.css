@@ -21,6 +21,29 @@ hr {
   border: 1px solid #d1d1d1;
   margin-bottom: 27px;
 }
+/* header */
+header {
+  background-color: #562eff;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+.menu a {
+  margin-right: 30px;
+  text-decoration: none;
+  color: #fff;
+}
+.logo img {
+  width: 40.424px;
+  height: 51px;
+  margin-left: 50px;
+}
+.logo span {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
 /* Top players style */
 .top-players {
   margin-bottom: 30px;
@@ -109,4 +132,35 @@ i {
 }
 .course-time span {
   color: rgb(226, 60, 116);
+}
+@media only screen and (max-width: 668px) {
+  .container {
+    width: 100%;
+  }
+  .players,
+  .blogs,
+  .courses {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .player,
+  .blog {
+    flex-direction: column;
+  }
+  nav {
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 669px) and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+  .players,
+  .blog,
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .player,
+  .blog {
+    flex-direction: column;
+  }
 }
